@@ -1,0 +1,12 @@
+{% extends 'event/index.html' %}
+
+{% block content %}
+<h2>Sign up</h2>
+<form method="post">
+  {% csrf_token %}
+  {{ user_form.as_p }}
+  {{ users_form.as_p }}
+  <button type="submit">Save changes</button>
+</form>
+
+{% endblock content %}
